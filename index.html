@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <link rel="icon" href="wababababobo.png" type="image/icon">
+    <link rel="stylesheet" type="text/css" href="sounboard.css">
+    <meta charset="UTF-8">
+    <meta name="title" content="Soundboard - Gaige's web">
+    <meta name="description" content="Gaige's web soundboard">
+    <style>
+        body {
+            background-image: linear-gradient(blue, black);
+        }
+
+        h1 {
+            color: white;
+        }
+
+        h3 {
+            color: white;
+        }
+
+        p {
+            color: white;
+        }
+
+        #grid {
+            display: grid;
+            grid-template-columns: 250px 250px 250px 250px;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+    <title>Soundboard</title>
+</head>
+<body>
+    <div id="grid">
+        <button onclick="boom.play()">Vine boom </button>
+        <button onclick="fart.play()">Fart reverb </button>
+        <button onclick="bababooey.play()">Bababooey </button>
+        <button onclick="bruh.play()">Bruh </button>
+
+        <button onclick="bonk.play()">Scout bonk </button>
+        <button onclick="fart3.play()">Another fart </button>
+        <button onclick="omg.play()">oh mah gahd </button>
+        <button onclick="bup.play()">bup</button>
+
+        <button onclick="getout.play()">GET OUT</button>
+        <button onclick="boing.play()">boing</button>
+
+    </div>
+    <div style="bottom:0%; left: 0%;">
+        <hr>
+    </div>
+    <fieldset>
+        <legend>Volume</legend>
+        <form method="post">
+            <input type="range" min="0" max="1" step="0.01" value="1" id="volumeslider">
+        </form>
+        <button onclick="setVolume();">Set</button>
+    </fieldset>
+    <script type="text/javascript" src="soundboard.js">
+
+    </script>
+</body>
+
+</html>
