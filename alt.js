@@ -4,13 +4,31 @@ const audioFiles = [
     'fart3.mp3', 'hwg.mp3', 'oh mah gahd.mp3', 'bup.mp3', 'getout.mp3', 'boing.mp3'
 ];
 
-const audioElements = audioFiles.map(src => {
-    const audio = new Audio(`audios/${src}`);
+const audioMap = new Map();
+
+audioFiles.forEach(src => {
+    const audio = new Audio(`./audios/${src}`);
+    const id = src.slice(0, -4);
+    audio.id = id;
+    audioMap.set(id, audio);  // Store audio elements in the map
+    console.log(src + ' has loaded successfully');
+    
     if (['fart.mp3', 'bababooey.mp3', 'bonk.mp3', 'fart3.mp3', 'oh mah gahd.mp3', 'bup.mp3', 'getout.mp3', 'boing.mp3'].includes(src)) {
         audio.className = 'audio';
     }
-    return audio;
 });
+
+function playAudioById(id) {
+    const audioElement = audioMap.get(id);
+    if (audioElement) {
+        audioElement.play();
+    } else {
+        console.log(`Audio with ID ${id} not found`);
+    }
+}
+
+// Play the 'fart' sound
+playAudioById('fart');
 
 const volumeSlider = document.getElementById('volumeslider');
 
