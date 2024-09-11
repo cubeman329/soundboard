@@ -45,6 +45,9 @@
             border-radius: 10px;
             width: 600px;
         }
+        #volumeslider {
+            width: 100%;
+        }
     </style>
     <title>Soundboard</title>
 </head>
@@ -62,6 +65,7 @@
 
         <button onclick="playAudioById('getout')">GET OUT</button>
         <button onclick="playAudioById('boing')">boing</button>
+        <button onclick="playAudioById('huh')">huh</button>
 
     </div>
     <div style="bottom:0%; left: 0%;">
@@ -73,7 +77,6 @@
             <form method="post">
                 <input type="range" min="0" max="1" step="0.01" value="1" id="volumeslider">
             </form>
-            <button onclick="setVolume();">Set</button>
         </fieldset>    
     </div>
     <script type="text/javascript" src="soundboard.js">
